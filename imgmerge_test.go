@@ -1,4 +1,4 @@
-package imgmerge
+package cat_hash
 
 import (
 	"fmt"
@@ -66,7 +66,9 @@ func TestMergeImage(t *testing.T) {
 
 	for i, img := range imgs {
 		t.Run("", func(t *testing.T) {
-			MergeImage(img, "image/fur/0.png", fmt.Sprintf("%s%d%s", "temp/out", i, ".png"))
+			if err := MergeImage(img, "image/fur/0.png", fmt.Sprintf("%s%d%s", "temp/out", i, ".png")); err != nil {
+				fmt.Println(err)
+			}
 		})
 	}
 }

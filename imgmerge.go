@@ -1,4 +1,4 @@
-package imgmerge
+package cat_hash
 
 import (
 	"image"
