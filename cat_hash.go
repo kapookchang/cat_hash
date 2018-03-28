@@ -54,7 +54,7 @@ func MergeImage(imgName string, beseImg string, outImg string) error {
 		return err
 	}
 	pixels1 := DecodePixelsFromImage(img1, 0, 0)
-	pixels2 := DecodePixelsFromImage(img2, (img1.Bounds().Dx()/2)-(img2.Bounds().Dx()/3), (img1.Bounds().Dy()/2)-(img2.Bounds().Dy()/2))
+	pixels2 := DecodePixelsFromImage(img2, 0, 0)
 	img := image.NewRGBA(image.Rect(0, 0, img1.Bounds().Dx(), img1.Bounds().Dy()))
 	for _, px := range append(pixels1, pixels2...) {
 		if !px.IsTransparent() {
