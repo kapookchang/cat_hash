@@ -61,22 +61,12 @@ func TestOpenAndDecode(t *testing.T) {
 func TestMergeImage(t *testing.T) {
 
 	imgs := []string{
-		"temp/1.png",
-		"temp/2.png",
-		"temp/3.png",
-		"temp/4.png",
-		"temp/5.png",
-		"temp/6.png",
-		"temp/7.png",
-		"temp/8.png",
-		"temp/9.png",
-		"temp/10.png",
-		"temp/11.png",
+		"image/body/0.png",
 	}
 
 	for i, img := range imgs {
 		t.Run("", func(t *testing.T) {
-			MergeImage(img, "temp/shirt.png", fmt.Sprintf("%s%d%s", "temp/out", i, ".png"))
+			MergeImage(img, "image/fur/0.png", fmt.Sprintf("%s%d%s", "temp/out", i, ".png"))
 		})
 	}
 }
